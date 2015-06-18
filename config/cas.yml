@@ -14,13 +14,22 @@ defaults: &defaults
 development:
   <<: *defaults
   authenticators:
-    static:
-      class: "CASino::StaticAuthenticator"
+    carebest:
+      class: "CASino::ActiveRecordModelAuthenticator"
       options:
-        users:
-          testuser:
-            password: "foobar123"
-
+        connection:
+          adapter: "mysql2"
+          host: "localhost"
+          username: "root"
+          password: "anaircqweqwe"
+          database: "articles"
+        table: "kwuser"
+        username_column: "email"
+        password_column: "userPassword"
+        extra_attributes:
+          email: "email"
+          fullname: "userFullname" 
+  
 test:
   <<: *defaults
   authenticators:
@@ -42,10 +51,10 @@ production:
         host: "localhost"
         username: "root"
         password: "anaircqweqwe"
-        database: "sso"
-      table: "users"
-      username_column: "username"
-      password_column: "password"
+        database: "articles"
+      table: "kwuser"
+      username_column: "email"
+      password_column: "userPassword"
       extra_attributes:
-        email: "email_database_column"
-        fullname: "displayname_database_column"
+        email: "email"
+        fullname: "userFullname"
