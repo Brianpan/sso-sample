@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
 
     def active_for_authentication?
       # !inactive && confirmed?
-      true
+      confirmed?
     end
 
     def confirmed?
