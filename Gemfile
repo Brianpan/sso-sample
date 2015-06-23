@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # sso gem casino
 gem 'casino'
+gem 'redis-session-store'
 # gem 'casino-activerecord_authenticator'
 
 # Use ActiveModel has_secure_password
