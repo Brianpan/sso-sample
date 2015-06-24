@@ -22,13 +22,13 @@ class Api::UsersController < CASino::ApplicationController
     if CASino::ServiceTicket.exists?(ticket: params[:stk])
       uid = CASino::ServiceTicket.find_by(ticket: params[:stk]).ticket_granting_ticket.user.username
     end
-    render json: uid
+    render json: {user: uid}
   end
 
-  def get_cookies
-  	# curr_ticket = CASino::LoginTicket.create
-  	tgt = current_ticket_granting_ticket
-  	#handle_signed_in(tgt)
-  	render json: tgt
-  end	
+  # def get_cookies
+  # 	# curr_ticket = CASino::LoginTicket.create
+  # 	tgt = current_ticket_granting_ticket
+  # 	#handle_signed_in(tgt)
+  # 	render json: tgt
+  # end	
 end
