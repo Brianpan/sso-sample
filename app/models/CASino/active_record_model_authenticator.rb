@@ -11,5 +11,5 @@ class CASino::ActiveRecordModelAuthenticator < CASino::Authenticator
   def validate(username, password)
     @model.validate(username, password)
   end
-
+  
 end

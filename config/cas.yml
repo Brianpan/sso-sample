@@ -28,7 +28,8 @@ development:
         password_column: "userPassword"
         extra_attributes:
           email: "email"
-          fullname: "userFullname" 
+          fullname: "userFullname"
+          authtoken: "authtoken" 
   
 test:
   <<: *defaults

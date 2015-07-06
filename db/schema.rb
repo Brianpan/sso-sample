@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618101355) do
+ActiveRecord::Schema.define(version: 20150706032940) do
 
   create_table "casino_auth_token_tickets", force: :cascade do |t|
     t.string   "ticket",     limit: 255, null: false

@@ -25,10 +25,6 @@ class Api::UsersController < CASino::ApplicationController
     render json: {user: uid}
   end
 
-  # def get_cookies
-  # 	# curr_ticket = CASino::LoginTicket.create
-  # 	tgt = current_ticket_granting_ticket
-  # 	#handle_signed_in(tgt)
-  # 	render json: tgt
-  # end	
+  
+
 end

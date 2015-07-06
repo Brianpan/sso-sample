@@ -42,6 +42,7 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -72,6 +73,13 @@ GEM
     debug_inspector (0.0.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.5.2)
@@ -116,6 +124,7 @@ GEM
     mysql2 (0.3.18)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    orm_adapter (0.5.0)
     rack (1.6.4)
     rack-accept (0.4.5)
       rack (>= 0.4)
@@ -153,6 +162,8 @@ GEM
     redis-session-store (0.8.0)
       actionpack (>= 3, < 5)
       redis
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     rotp (2.1.1)
     rqrcode (0.6.0)
       chunky_png
@@ -193,6 +204,8 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
+    warden (1.2.3)
+      rack (>= 1.0)
     web-console (2.1.3)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -206,6 +219,7 @@ DEPENDENCIES
   byebug
   casino
   coffee-rails (~> 4.1.0)
+  devise
   jbuilder (~> 2.0)
   jquery-rails
   mysql2

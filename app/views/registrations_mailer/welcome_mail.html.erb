@@ -1,0 +1,6 @@
+<%= @mailbox %>
+<div class = "content">
+  歡迎加入carebest !
+</div>
+
+<%= link_to "確認帳號", confirmation_api_authentications_url(confirmation_token: @user.confirmation_token)%>

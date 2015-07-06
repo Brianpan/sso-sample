@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users
   mount CASino::Engine => '/', :as => 'casino'
   namespace :api do
     get "users/tickets" => "users#tickets" 
     get "users/sign_in" => "users#sign_in"
-
-    get "users/get_cookies" => "users#get_cookies"  
+    resources :authentications, only: [:create, :update, :destroy, :show] do 
+      collection do 
+        get "confirmation"
+      end  
+    end  
   end  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
