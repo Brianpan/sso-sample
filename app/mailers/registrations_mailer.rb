@@ -1,7 +1,5 @@
 class RegistrationsMailer < ApplicationMailer
 	def sendmail(mailsettings)
-   
-
 	    @user = mailsettings[:user]
 	    # @reservation_decorator =  ReservationDecorator.new(@booking)
 	    @mailbox = @user.email

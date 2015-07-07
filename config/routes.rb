@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     resources :authentications, only: [:create, :update, :destroy, :show] do 
       collection do 
         get "confirmation"
-      end  
+      end 
+
+      member do
+        get "password_validation" 
+      end 
     end  
   end  
   # The priority is based upon order of creation: first created -> highest priority.
