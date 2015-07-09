@@ -19,3 +19,4 @@
 /config/database.yml
 /config/application.yml
 /config/cas.yml
+/config/secrets.yml
