@@ -53,7 +53,7 @@
 set :deploy_to, "/home/#{fetch(:user)}/projects/#{fetch(:application)}"
 
 server '192.168.168.180',
-  roles: %w{web app},
+  roles: %w{web app db},
   user: fetch(:user),
   ssh_options: {
     user: 'apps', # overrides user setting above

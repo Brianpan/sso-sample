@@ -28,6 +28,6 @@ module SsoCarebest
     config.active_record.raise_in_transactional_callbacks = true
 
     ## sub uri assets
-    #config.action_controller.relative_url_root = '/sso'
+    config.action_controller.relative_url_root = '/sso'
   end
 end
