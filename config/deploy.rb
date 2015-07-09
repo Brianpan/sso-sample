@@ -12,7 +12,7 @@ set :default_stage, "staging"
 
 set :conditionally_migrate, true           # Defaults to false. If true, it's skip migration if files in db/migrate not modified
 set :assets_roles, [:web, :app]            # Defaults to [:web]
-set :assets_prefix, 'sso'   # Defaults to 'assets' this should match config.assets.prefix in your rails config/application.rb
+# set :assets_prefix, 'sso'   # Defaults to 'assets' this should match config.assets.prefix in your rails config/application.rb
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
