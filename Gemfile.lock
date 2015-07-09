@@ -243,6 +243,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capistrano (~> 3.4.0)
+  capistrano-bundler
   capistrano-passenger
   capistrano-rails
   capistrano-rvm
