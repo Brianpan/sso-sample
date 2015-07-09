@@ -29,6 +29,8 @@ gem 'redis-session-store'
 # gem 'casino-activerecord_authenticator'
 
 gem 'devise'
+
+gem 'figaro'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -44,7 +46,10 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  
+  gem 'capistrano-passenger'
+  gem 'capistrano', '~> 3.4.0'
+  gem 'rvm-capistrano', require: false
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end

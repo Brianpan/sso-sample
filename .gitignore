@@ -16,3 +16,6 @@
 !/log/.keep
 /tmp
 /config/email.yml
+/config/database.yml
+/config/application.yml
+/config/cas.yml

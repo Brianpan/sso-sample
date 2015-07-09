@@ -5,9 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
     establish_connection(:adapter  => "mysql2",
     :host     => "localhost",
-    :username => "root",
-    :password => "aniarcqweqwe",
-    :database => "articles")
+    :username => Figaro.env.user_database_name,
+    :password => Figaro.env.user_database_password,
+    :database => Figaro.env.user_database)
     self.table_name = "kwuser"
 
   before_save :create_default_data
