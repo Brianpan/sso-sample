@@ -51,6 +51,7 @@
 # ------------------------------------
 
 set :deploy_to, "/home/#{fetch(:user)}/projects/#{fetch(:application)}"
+set :ping_url, "http://192.168.168.180/#{fetch(:application)}"
 
 server '192.168.168.180',
   roles: %w{web app db},

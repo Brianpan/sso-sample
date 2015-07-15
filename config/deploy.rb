@@ -58,5 +58,24 @@ namespace :deploy do
     end
   end
   after :finishing, 'deploy:restart_passenger'
+  
+  desc 'Warm up the application by pinging it, so enduser wont have to wait'
+  task :ping do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute "curl -s -D - #{fetch(:ping_url, 'http://www.carebest.com.tw')} -o /dev/null"
+    end
+  end
+ 
+  after :restart_passenger, :ping
+end
 
+namespace :capture do 
+  task :capture_simple do 
+    on roles(:web) do 
+      within "/home/brian/" do 
+        capture_txt = capture('cat pass')
+        puts capture_txt
+      end
+    end
+  end
 end
